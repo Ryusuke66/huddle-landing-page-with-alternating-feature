@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --mainColor: hsl(192, 100%, 9%);;
+}
+
+body {
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
+h1, h2 {
+    font-family: "Poppins";
+    color: var(--mainColor);
+}
+
+button{
+    border: none;
+    border-radius: 50px;
+    font-family: "Open Sans";
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+p:not(.desc) {
+    color: hsl(208, 11%, 55%);
+}
+
+header {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: end;
+    align-items: center;
+    gap: 50px 0;
+    background-color: hsl(193, 100%, 96%);
+    background-image: url("images/bg-hero-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--mainColor);
+}
+
+header .logo {
+    justify-self: start;
+    width: 200px;
+}
+
+header .try {
+    background-color: white;
+    height: 45px;
+    width: 200px;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
+    color: var(--mainColor);
+}
+
+header .description * {
+    margin-bottom: 20px;
+}
+
+header .description h1 {
+    padding-right: 35%;
+}
+
+header .description p {
+    padding-right: 70px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+header .description button, .popup button {
+    color: white;
+    background-color: hsl(322, 100%, 66%);
+    height: 55px;
+    width: 250px;
+}
+
+header .mockups {
+    width: 100%;
+}
+
+main {
+    padding: 9%;
+    padding-bottom: 0;
+}
+
+.card {
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 0 40px 0 100px;
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+    height: 450px;
+}
+
+.card .content {
+    padding-right: 170px;
+}
+
+.card h2 {
+    margin-bottom: 30px;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+.card:nth-of-type(2) .content {
+    padding: 0 0 0 80px;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 350px;
+}
+
+.popup div {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 70px 130px 50px;
+    position: absolute;
+    background-color: white;
+    bottom: -100px;
+    border-radius: 10px;
+}
+
+.popup h2 {
+    font-size: 2em;
+}
+
+.popup button {
+    width: 70%;
+    height: 80px;
+    font-size: 1.2em;
+    margin-top: 50px;
+    box-shadow: 0px 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--mainColor);
+    color: white;
+    display: grid;
+    grid-template-columns: 45% repeat(3, 1fr);
+    align-items: start;
+    padding: 10%;
+    height: 650px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .logo {
+    width: 300px;
+    margin-bottom: 40px;
+    grid-column: span 4;
+}
+
+.col-1 {
+    width: 90%;
+}
+
+.col-1, .col-2, .col-3, .col-4 {
+    display: grid;
+}
+
+.col-1 *, .col-2 *, .col-3 * {
+    margin-bottom: 20px;
+}
+
+.col-1 .info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info * {
+    margin-right: 30px;
+}
+
+.col-1 .location {
+    color: white;
+}
+
+.col-4 {
+    min-height: 100%;
+}
+
+.social-media span {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin:5px;
+}
+
+.social-media span:hover {
+    border-color: hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
+}
+
+.copyright {
+    grid-column: span 4;
+    justify-self: end;
+}
+
+
+@media (max-width: 1200px) {
+
+    footer {
+        padding: 15% 10%;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header .logo {
+        width: 120px;
+    }
+
+    header .try {
+        width: 120px;
+        height: 30px;
+    }
+
+    .description, .mockups {
+        grid-column: span 2;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    header .description h1 {
+        padding: 0;
+    }
+
+    header .description p {
+        padding: 0;
+    }
+
+    main {
+        padding: 15% 4%;
+    }
+
+    .card, .card:nth-of-type(2) {
+        padding: 50px 20px;
+        flex-direction: column-reverse;
+        border-radius: 15px;
+        text-align: center;
+        height: auto;
+    }
+
+    .card .content, .card:nth-of-type(2) .content{
+        padding: 50px 0 0 0;
+    }
+
+    .card h2 {
+        margin-bottom: 10px;
+    }
+
+    .popup {
+        height: 200px;
+    }
+
+    .popup div {
+        padding: 50px 0;
+        width: 100%;
+    }
+
+    .popup div h2{
+        font-size: 1.3em;
+    }
+
+    .popup button {
+        height: 60px;
+        font-size: 1em;
+        margin-top: 20px;
+    }
+
+    footer {
+        display: block;
+        height: auto;
+        padding: 25% 5% 15%;
+    }
+
+    footer .logo {
+        width: 180px;
+    }
+
+    .col-1 {
+        width: 100%;
+    }
+    
+    .col-1 .location {
+        margin-right: 0;
+    } 
+
+    .col-4 {
+        justify-content: center;
+        padding: 40px 0 30px;
+    }
+
+    .social-media {
+        display: block;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+    }
+
+}
+
+
+.attribution {display: none; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
